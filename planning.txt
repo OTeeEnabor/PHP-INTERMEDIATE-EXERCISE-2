@@ -4,4 +4,20 @@ input 1 -  a number [set a reasonable range]
 
 input 2 -  a color [this will be used to change the background color of the page]
 
-input 3 - images  [this will be displayed on the page.]
+input 3 - images  [this will be displayed on the page.user has to choose between cat, car and balloon]
+-------------------------------------------------------
+
+
+user process flow:
+step 1: user enters a number;
+step 2: user selects a color;
+step 3: user selects an image;
+step 4: user presses submit button;
+
+-------------------------------------------------------
+output flow:
+1- image 
+Show image based on user selection
+number of images shown == number entered
+2 - background color
+page background color == user selected color;
