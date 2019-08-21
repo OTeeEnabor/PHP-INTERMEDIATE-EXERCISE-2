@@ -14,7 +14,14 @@
     <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
 
     <b>Please enter a number: </b>
+    <!--<limit the user to range 1-10>-->
     <input type="number" name="number" min="1" max="10" >
+    <br>
+    <br>
+
+    <b>Please select a colour: </b>
+    <!--<User will be able to select a color and will get a hexidecimal value back>-->
+    <input type="color" name="favcolor" value="#ff0000">
     <br>
 
     
