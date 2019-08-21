@@ -9,8 +9,31 @@
     <title>INTERMEDIATE-EX-2</title>
 </head>
 
-<body>
 
+<?php
+
+if(isset($_POST['submitForm']) && (isset($_POST['favcolor']))){
+        #set the background color of the page to user selection. 
+        $bg_color = $_POST['favcolor'];
+
+        echo<<<END
+
+        <style>
+
+
+            body{
+                background-color: $bg_color;
+            }
+
+        </style>
+
+END;
+    }
+
+?>
+
+
+<body>
     <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
 
     <b>Please enter a number: </b>
@@ -31,12 +54,9 @@
     <input type="radio" name="image" value="car"> Car<br><br>
   <input type="radio" name="image" value="cat">Cat<br><br>
   <input type="radio" name="image" value="balloon"> Balloon
-
-    
-    
     <br>
     <br>
-    <input type="submit" name="submitQuiz">
+    <input type="submit" name="submitForm">
     </form>
 </body>
 </html>
