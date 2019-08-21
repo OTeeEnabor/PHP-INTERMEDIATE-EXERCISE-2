@@ -40,34 +40,11 @@ END;
 $cat='<img src="images/cat.png">';
 $car='<img src="images/car.jpg">';
 $ballon='<img src="images/balloon.jpg">';
-
+$img = $_POST['image'];
  if(isset($_POST['submitForm'])&&(isset($_POST['image']))&& (isset($_POST['number']))){
-
-    $img = $_POST['image'];
-
-    for($n=1;$n<$_POST['number'];$n++){
-
-        echo<<<END
-
-        $img
-        
-
-END;
+    for($n=1;$n <= $_POST['number'];$n++){
+        echo "$img";
     }
-
-    // echo $cat;
-
-    // $num = $_POST['number'];
-
-    // $img = $_POST['image'];
-    
-
-
-
-    
-
-
-
  }
 ?>
     <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
