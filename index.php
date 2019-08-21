@@ -23,11 +23,19 @@
     <!--<User will be able to select a color and will get a hexidecimal value back>-->
     <input type="color" name="favcolor" value="#ff0000">
     <br>
+    <br>
+
+    <b>Please select an image you would like to see: </b>
+    <br>
+
+    <input type="radio" name="image" value="car"> Car<br><br>
+  <input type="radio" name="image" value="cat">Cat<br><br>
+  <input type="radio" name="image" value="balloon"> Balloon
 
     
     
-
-    
+    <br>
+    <br>
     <input type="submit" name="submitQuiz">
     </form>
 </body>
