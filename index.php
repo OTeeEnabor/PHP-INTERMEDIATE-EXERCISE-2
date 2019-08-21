@@ -9,9 +9,7 @@
     <title>INTERMEDIATE-EX-2</title>
 </head>
 
-
 <?php
-
 if(isset($_POST['submitForm']) && (isset($_POST['favcolor']))){
         #set the background color of the page to user selection. 
         $bg_color = $_POST['favcolor'];
@@ -27,13 +25,51 @@ if(isset($_POST['submitForm']) && (isset($_POST['favcolor']))){
 
         </style>
 
+
+
 END;
     }
 
 ?>
 
 
+
+
 <body>
+<?php
+$cat='<img src="images/cat.png">';
+$car='<img src="images/car.jpg">';
+$ballon='<img src="images/balloon.jpg">';
+
+ if(isset($_POST['submitForm'])&&(isset($_POST['image']))&& (isset($_POST['number']))){
+
+    $img = $_POST['image'];
+
+    for($n=1;$n<$_POST['number'];$n++){
+
+        echo<<<END
+
+        $img
+        
+
+END;
+    }
+
+    // echo $cat;
+
+    // $num = $_POST['number'];
+
+    // $img = $_POST['image'];
+    
+
+
+
+    
+
+
+
+ }
+?>
     <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
 
     <b>Please enter a number: </b>
@@ -51,9 +87,9 @@ END;
     <b>Please select an image you would like to see: </b>
     <br>
 
-    <input type="radio" name="image" value="car"> Car<br><br>
-  <input type="radio" name="image" value="cat">Cat<br><br>
-  <input type="radio" name="image" value="balloon"> Balloon
+    <input type="radio" name="image" value='<img src="images/car.jpg">'> Car<br><br>
+  <input type="radio" name="image" value='<img src="images/cat.png">'>Cat<br><br>
+  <input type="radio" name="image" value='<img src="images/balloon.jpg">'> Balloon
     <br>
     <br>
     <input type="submit" name="submitForm">
